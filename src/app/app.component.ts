@@ -17,4 +17,8 @@ export class AppComponent implements OnInit {
       gender: new FormControl('male'),
     });
   }
+
+  onSubmit() {
+    console.log(`🔎 | AppComponent | onSubmit > signupForm:`, this.signupForm);
+  }
 }
