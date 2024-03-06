@@ -18,7 +18,18 @@
                 signupForm.get('userData.username').touched
               "
             >
-              Please entre a valid username!
+              <span
+                *ngIf="
+                  signupForm.get('userData.username').errors['nameIsForbidden']
+                "
+              >
+                This name is Invalid
+              </span>
+              <span
+                *ngIf="signupForm.get('userData.username').errors['required']"
+              >
+                This Field is Required!
+              </span>
             </span>
           </div>
           <div class="form-group">
